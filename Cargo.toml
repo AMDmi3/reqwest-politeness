@@ -1,0 +1,23 @@
+[package]
+name = "reqwest-politeness"
+description = "Reqwest middleware to enforce delay between requests"
+version = "0.1.0"
+authors = ["Dmitry Marakasov <amdmi3@amdmi3.ru>"]
+repository = "https://github.com/AMDmi3/reqwest-politeness"
+readme = "README.md"
+categories = ["web-programming::http-client"]
+keywords = ["reqwest", "middleware", "politeness"]
+license = "MIT OR Apache-2.0"
+edition = "2024"
+rust-version = "1.88"
+
+[dependencies]
+async-trait = "0.1.89"
+http = "1.4.0"
+reqwest = { version = "0.13.1", default-features = false }
+reqwest-middleware = "0.5.0"
+tokio = { version = "1.49.0", default-features = false }
+
+[dev-dependencies]
+mockito = "1.7.2"
+tokio = { version = "1.49.0", default-features = false, features=["macros", "rt"] }
